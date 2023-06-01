@@ -4,8 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
 height: 100vh;
 width: 100%;
-
-
 display: grid;
 grid-template-rows: 11.6rem auto;
 grid-template-areas:
@@ -13,13 +11,10 @@ grid-template-areas:
 "content"
 ;
 
-
-
 main{
 padding: 0 5rem;
 grid-area: content;
 overflow-y: auto;
-
 
 .movieAndRating{
 display: flex;
@@ -29,11 +24,23 @@ gap: 1rem;
 height: 6rem;
 margin:2.4rem 0;
 
-
 >h1{
 color: ${({theme}) => theme.COLORS.WHITE};
-font-size: 3.6rem;
+font-size: clamp(1.2rem, 1.2rem + 1vw, 2.4rem);
 font-weight: 500;
+margin-top:.2rem;
+text-transform: uppercase;
+}
+
+>svg{
+font-size: clamp(1.2rem, 1.2rem + 1vw, 2.4rem);
+}
+
+>strong{
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
+color: white;
+font-style:italic;
+text-transform:uppercase;
 }
 }
 
@@ -41,7 +48,7 @@ font-weight: 500;
 display: flex;
 align-items: center;
 margin-bottom: 4rem;
-gap: .8rem;
+gap: 1rem;
 color: ${({theme}) => theme.COLORS.WHITE};
 
 >img{
@@ -50,14 +57,18 @@ height: 1.6rem;
 border-radius: 50%;
 }
 
+>strong{
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
+}
+
 >span{
 display:flex;
 align-items: center;
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
 
 
 svg{
-width: 1.6rem;
-height: 1.6rem;
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
 margin-right: .8rem;
 color: ${({theme}) => theme.COLORS.PINK};
 }
@@ -69,22 +80,42 @@ display: flex;
 flex-direction: row;
 justify-content:start;
 margin-bottom: 4rem;
-border: none;
+
+*{
+border: .1rem solid ${({theme}) => theme.COLORS.PINK};
+color: white;
+}
 }
 
 p{
+border:none;
+width: 80%;
+margin: 0 auto;
+background: ${({theme}) => theme.COLORS.BACKGROUND_707};
+border-radius: 3rem;
 padding: 3rem;
 font-size: 1.6rem;
 line-height: 2.1rem;
 text-align: justify;
 font-weight: 400;
 color: ${({theme}) => theme.COLORS.WHITE};
-
 display: flex;
 align-items: center;
 text-align: justify;
+justify-content: center;
 }
 
+footer{
+width: 80%;
+margin:1.4rem auto;
+display: flex;
+justify-content: flex-end;
+
+button{
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
+width:auto;
+}
+}
 }
 `;
 

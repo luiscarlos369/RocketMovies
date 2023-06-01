@@ -1,22 +1,38 @@
-import{ Link } from "react-router-dom";
+import{ Link, useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { Button } from "../Button";
+import {useAuth} from "../../hooks/auth";
+import {api} from "../../services/api";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 export function User(){
+
+const { signOut, user } = useAuth();
+const navigate= useNavigate();
+
+const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+function goBack(){
+navigate("/");
+signOut();
+}
+
 return(
 <Container>
 <div>
 
-<strong>Rodrigo Gonçalves</strong>
+<strong>{user.name}</strong>
 
-<Link to="/login">
-<Button title="Sair" />
-</Link>
+<Button 
+title="Sair" 
+onClick={goBack}
+/>
+
 </div>
 <Link to="/profile">
-<img src="https://github.com/rodrigorgtic.png" alt="foto do usúario." />
+<img src={avatarUrl} 
+alt={`${user.name} - photo`} />
 </Link>
-
 </Container>
 )
 }

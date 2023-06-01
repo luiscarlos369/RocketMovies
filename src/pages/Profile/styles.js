@@ -10,10 +10,7 @@ height: 14.5rem;
 background: ${({theme}) => theme.COLORS.BACKGROUND_707};
 display: flex;
 align-items: center;
-
 }
-
-
 `;
 
 
@@ -48,14 +45,11 @@ border-radius: 50%;
 >label{
 width: 4.8rem;
 height: 4.8rem;
-
 background: ${({theme}) => theme.COLORS.PINK};
 border-radius: 50%;
-
 display: flex;
 align-items: center;
 justify-content: center;
-
 position: absolute;
 bottom: .7rem;
 right: .7rem;
@@ -71,9 +65,5 @@ height: 3rem;
 margin-top:0;
 color: ${({theme}) => theme.COLORS.GRAY_707}; 
 }
-
-
-
 }
-
 `;

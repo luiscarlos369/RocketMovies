@@ -14,21 +14,14 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-
-
 }
 `;
 
 export const Form = styled.form`
-
-a{
-color: ${({theme}) => theme.COLORS.PINK};
-}
-
 >h1{
 font-size: 4.8rem;
 font-weight: 700;
-
+color: ${({theme}) => theme.COLORS.PINK};
 }
 
 p{
@@ -54,5 +47,4 @@ export const Background = styled.div`
 flex: 1;
 background: url(${backgroundImg}) no-repeat center center;
 background-size: cover;
-
 `;

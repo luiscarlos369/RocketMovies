@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div `
 width: 100%;
 height: 100vh;
-
-
 display: grid;
 grid-template-rows: 10.5rem auto;
 grid-template-areas:
@@ -16,13 +14,12 @@ padding: 3rem 5rem 0;
 grid-area: content;
 overflow-y: auto;
 
-
 h1{
 color:${({theme}) => theme.COLORS.WHITE};
 font-size: 3.6rem;
 line-height: 4.7rem;
 font-weight: 500;
-margin: 2.4rem 0 4rem;
+margin: 2.4rem 0;
 }
 
 .movieAndRating{
@@ -34,10 +31,37 @@ width: 100%;
 margin-bottom: 3rem;
 
 *{
-width: 48%;
+width: 40%;
+
+&::placeholder{
+font-size: clamp(1rem, 1rem + 1vw, 1.6rem);
 }
 
+&:nth-last-child(3){
+width:12%;
+border: none;
 
+>input{
+font-size: clamp(.2rem, .2rem + .6vw, 1rem);
+color: ${({theme}) => theme.COLORS.PINK};
+
+&:hover{
+border:.1rem solid ${({theme}) => theme.COLORS.PINK};
+
+&::placeholder{
+color: ${({theme}) => theme.COLORS.PINK};
+}
+}
+}
+
+}
+}
+
+input{
+width: 100%;
+padding:.6rem;
+font-size: clamp(.4rem, .4rem + 1vw, 1.6rem);
+}
 }
 
 h2{
@@ -50,46 +74,12 @@ margin-bottom: 2.4rem;
 .tags{
 background: ${({theme}) => theme.COLORS.BACKGROUND_606};
 display: flex;
-flex-direction: row;
 align-items: center;
-padding: 1.6rem;
+padding: .6rem;
 border: none;
 border-radius:.8rem;
 height: 9rem;
 margin-bottom: 3rem;
-
-*{
-display: flex;
-flex-direction: row;
-align-items: center;
-height: 5.6rem;
-gap: 1.6rem;
-border-radius: 1rem;
-background:${({theme}) => theme.COLORS.BACKGROUND_808};
-
-span{
-color: ${({theme}) => theme.COLORS.WHITE};
-font-size: 1.6rem;
-font-weight: 400;
-background:none;
-}
-
-svg{
-color: ${({theme}) => theme.COLORS.PINK};
-font-size: 2.4rem;
-font-weight: 600;
-}
-
-&:nth-child(2){
-background: transparent;
-border: .3rem dashed ${({theme}) => theme.COLORS.BACKGROUND_808}; 
-
-svg{
-border: none;
-}
-}
-
-}
 }
 
 .action{
@@ -113,17 +103,8 @@ color: ${({theme}) => theme.COLORS.PINK};
 }
 }
 
-
-
-
-
-
-
 }
-
 }
-
-
 `; 
 
 export const Textarea = styled.textarea`
@@ -136,4 +117,5 @@ padding:2rem;
 color: ${({theme}) => theme.COLORS.WHITE};
 resize: none;
 margin-bottom: 3rem;
+font-size: clamp(.8rem, .8rem + 1vw, 1.6rem);
 `;
