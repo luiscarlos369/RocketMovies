@@ -91,10 +91,7 @@ p{
 border:none;
 width: 80%;
 margin: 0 auto;
-background: ${({theme}) => theme.COLORS.BACKGROUND_707};
-border-radius: 3rem;
-padding: 3rem;
-font-size: 1.6rem;
+font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
 line-height: 2.1rem;
 text-align: justify;
 font-weight: 400;
@@ -112,8 +109,9 @@ display: flex;
 justify-content: flex-end;
 
 button{
-font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
-width:auto;
+width: auto;
+height: 3rem;
+font-size: clamp(.4rem, .4rem + 1vw, 1.6rem);
 }
 }
 }

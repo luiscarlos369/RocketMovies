@@ -9,15 +9,17 @@ border-radius: 1.6rem;
 padding: 3.2rem;
 margin-bottom: 2rem;
 
-h1{
+h1{ 
 color: ${({theme}) => theme.COLORS.WHITE};
-font-size: clamp(1.2rem, 1.2rem + 1vw, 2.4rem);
+font-size: clamp(1rem, 1rem + 1vw, 2.4rem);
 text-transform:uppercase;
 }
 
-h3{
-font-size: 1.2rem;
+svg{
+font-size: clamp(1rem, 1rem + 1vw, 2.4rem);
 }
+
+
 
 p{
 font-size: clamp(.6rem, .6rem + 1vw, 1.6rem);
@@ -32,7 +34,7 @@ a{
 color: ${({theme}) => theme.COLORS.WHITE};
 position: absolute;
 right:0;
-top: 1.8rem;
+top: 2.2rem;
 font-weight: 700;
 
 &:hover{

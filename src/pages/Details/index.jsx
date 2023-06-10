@@ -31,7 +31,7 @@ const confirm = window.confirm("Tem certeza de querer eliminar o Filme?")
 if(confirm){
 const response = await api.delete(`/notes/${params.id}`);
 setData(response.data);
-navigate(-1);
+navigate("/");
 }
 }
 

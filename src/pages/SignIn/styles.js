@@ -6,6 +6,8 @@ height: 100vh;
 display: flex;
 align-items: stretch;
 
+
+
 >.login{
 margin-top: 4rem;
 padding: 0 13.6rem 0 9.6rem;
